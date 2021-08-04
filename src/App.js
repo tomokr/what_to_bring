@@ -40,7 +40,7 @@ function App() {
       </div>
 
       <div>
-        <ul>
+        <ul style={{ listStyleType: "none" }}>
           {items.length > 0 &&
             items.map((item) => {
               return (

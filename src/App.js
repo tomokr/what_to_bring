@@ -8,7 +8,7 @@ function App() {
   function handleChange(e) {
     e.preventDefault();
     const newItem = inputValue;
-    setItems((lists) => [...lists, newItem]);
+    if (newItem !== "") setItems((lists) => [...lists, newItem]);
     setInputValue("");
   }
 

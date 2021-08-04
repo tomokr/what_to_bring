@@ -40,15 +40,17 @@ function App() {
       </div>
 
       <div>
-        {items.length > 0 &&
-          items.map((item) => {
-            return (
-              <Fragment key={item.id}>
-                <input type="checkbox" id={item} key={item.id} />
-                <label key={"label" + item.id}>{item}</label>
-              </Fragment>
-            );
-          })}
+        <ul>
+          {items.length > 0 &&
+            items.map((item) => {
+              return (
+                <li key={item.id}>
+                  <input type="checkbox" id={item} key={item.id} />
+                  <label key={"label" + item.id}>{item}</label>
+                </li>
+              );
+            })}
+        </ul>
       </div>
     </Fragment>
   );

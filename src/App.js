@@ -6,21 +6,9 @@ function App() {
   const [inputValue, setInputValue] = useState("");
 
   function handleChange(e) {
-    // const newItem = {
-    //   itemName: inputValue,
-    //   quantity: 1,
-    //   isSelected: false,
-    // };
     e.preventDefault();
     const newItem = inputValue;
-
-    console.log(items);
-    // const newItems = [...items, newItem];
-
     setItems((lists) => [...lists, newItem]);
-    // console.log(newItems);
-    console.log(newItem);
-    console.log(items);
     setInputValue("");
   }
 

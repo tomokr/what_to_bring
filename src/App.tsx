@@ -2,10 +2,10 @@ import React, { Fragment, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
 
-  function handleChange(e) {
+  function handleChange(e: React.FormEvent<HTMLElement>) {
     e.preventDefault();
     const newItem = inputValue;
     if (newItem !== "") setItems((lists) => [...lists, newItem]);
@@ -30,11 +30,11 @@ function App() {
       <div>
         <ul style={{ listStyleType: "none" }}>
           {items.length > 0 &&
-            items.map((item) => {
+            items.map((item, id) => {
               return (
-                <li key={item.id}>
-                  <input type="checkbox" id={item} key={item.id} />
-                  <label key={"label" + item.id}>{item}</label>
+                <li key={id}>
+                  <input type="checkbox" id={item} key={id} />
+                  <label key={"label" + id}>{item}</label>
                 </li>
               );
             })}

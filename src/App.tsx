@@ -12,6 +12,10 @@ function App() {
     setInputValue("");
   }
 
+  function removeAll() {
+    setItems([]);
+  }
+
   return (
     <Fragment>
       <h1>Shopping List</h1>
@@ -40,6 +44,8 @@ function App() {
             })}
         </ul>
       </div>
+
+      <button onClick={() => removeAll()}>Remove All</button>
     </Fragment>
   );
 }

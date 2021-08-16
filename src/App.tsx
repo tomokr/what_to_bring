@@ -39,8 +39,10 @@ function App() {
               items.map((item, id) => {
                 return (
                   <li key={id}>
-                    <input type="checkbox" id={item} key={id} />
-                    <label key={"label" + id}>{item}</label>
+                    <label key={"label" + id}>
+                      <input type="checkbox" id={item} key={id} />
+                      {item}
+                    </label>
                   </li>
                 );
               })}
@@ -48,6 +50,10 @@ function App() {
         </div>
 
         <button onClick={() => removeAll()}>Remove All</button>
+        <br />
+        <a href="https://github.com/tomokr/shopping_list">
+          https://github.com/tomokr/shopping_list
+        </a>
       </div>
     </Fragment>
   );

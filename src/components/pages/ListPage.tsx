@@ -1,6 +1,14 @@
 import React, { useState }  from 'react';
+import FavButton from '../atoms/FavButton';
 
-const ListPage = () => {
+interface Props {
+    listName:string,
+}
+
+const ListPage: React.FC<Props> = ({
+    listName,
+    ...props
+  }: Props) => {
     const [items, setItems] = useState<string[]>([]);
     const [inputValue, setInputValue] = useState("");
   
@@ -16,6 +24,8 @@ const ListPage = () => {
     }
     return (
     <>
+    <h2>{listName}</h2>
+    <FavButton />
         <div className="ShoppingListMain">
           <div className="header">
             <form onSubmit={handleChange}>

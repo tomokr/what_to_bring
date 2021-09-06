@@ -14,7 +14,7 @@ const ListMenu : React.FC<Props> = ({
   }: Props) => {
     return (
     <>
-        <a href="#" onClick={onClick} className={className}>{listName}</a><br />
+        <a href="/listPage" onClick={onClick} className={className}>{listName}</a><br />
     </>
     );
 

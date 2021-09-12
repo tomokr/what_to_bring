@@ -12,9 +12,10 @@ const ListMenu : React.FC<Props> = ({
     className,
     ...props
   }: Props) => {
+    const link = "/list/"+listName;
     return (
     <>
-        <a href="/listPage" onClick={onClick} className={className}>{listName}</a><br />
+        <a href={link} onClick={onClick} className={className}>{listName}</a><br />
     </>
     );
 

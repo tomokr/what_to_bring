@@ -1,14 +1,15 @@
 import React, { useState }  from 'react';
+import { useParams } from 'react-router-dom'
 import FavButton from '../atoms/FavButton';
 
 interface Props {
-    listName:string,
+    // listName:string,
 }
 
 const ListPage: React.FC<Props> = ({
-    listName,
     ...props
   }: Props) => {
+    const { listName } = useParams<{ listName: string }>();
     const [items, setItems] = useState<string[]>([]);
     const [inputValue, setInputValue] = useState("");
   

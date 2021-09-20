@@ -7,7 +7,7 @@ function ListMenuPage(){
         'list2',
         'list3'
       ]
-      const [title, setTitle] = useState<string>('default');
+      const [, setTitle] = useState<string>('default');
       const menuClicked = (event: React.MouseEvent<HTMLElement>) => {
         setTitle(event.currentTarget.className);
       }

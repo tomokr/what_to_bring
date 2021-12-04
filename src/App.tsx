@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 import "./App.css";
 import "milligram";
 import NavBar from "./components/atoms/NavBar";
@@ -8,10 +8,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
+import AboutPage from "./components/pages/AboutPage";
 
 function App() {
 
@@ -23,16 +21,13 @@ function App() {
       <h1 className="title">What to bring - list</h1>
 
         <Switch>
-          {/* <Route path="/about">
-            <About />
-          </Route> */}
+          <Route path="/about">
+            <AboutPage />
+          </Route>
           <Route path="/listpage">
             <ListMenuPage />
           </Route>
           <Route path="/list/:listName" component={ListPage} />
-          {/* <Route path="/">
-            <Home />
-          </Route> */}
         </Switch>
         <br />
         <a href="https://github.com/tomokr/shopping_list">

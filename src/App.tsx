@@ -27,7 +27,7 @@ function App() {
           <Route path="/listpage">
             <ListMenuPage />
           </Route>
-          <Route path="/list/:listName" component={ListPage} />
+          <Route path="/list/:listId" component={ListPage} />
         </Switch>
         <br />
         <a href="https://github.com/tomokr/shopping_list">

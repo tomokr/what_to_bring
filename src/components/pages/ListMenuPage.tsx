@@ -12,9 +12,9 @@ function ListMenuPage(){
         setTitle(event.currentTarget.className);
       }
     return (<>{
-      listItems.map((list)=>
+      listItems.map((list, idx)=>
         <li>
-          <ListMenu listName={list} onClick={menuClicked} className={list} />
+          <ListMenu listName={list} listId={idx+1} onClick={menuClicked} className={list} />
         </li>
       )
     }</>
